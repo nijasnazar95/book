@@ -1,0 +1,15 @@
+<ul>
+
+    {% for item in cart_items %}
+
+    <li>
+        {{ item.book.name}}  (x{{item.quantity}}) - Rs. {{item.book.price}}
+        <td><a href="{% url 'remove_from_cart' item.book.id  %}">Remove From Cart</a></td>
+
+        <a href="{% url 'buy_now' item.book.id %}">Buy Now</a>
+
+    </li>
+    {% endfor %}
+
+</ul>
+<h3>total_price: {{total_price}}</h3>

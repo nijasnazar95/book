@@ -1,0 +1,9 @@
+<form method="POST">
+
+    {% csrf_token %}
+    <h1>Are u sure u want to dlt {{book.name}}</h1>
+    <input type="submit" value="Yes">
+    <button><a href="{% url 'lines' %}">GO BACK
+        
+    </a></button>
+</form>
